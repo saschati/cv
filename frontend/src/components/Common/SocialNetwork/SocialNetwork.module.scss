@@ -1,0 +1,13 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+
+.socialNetwork {
+  display: block;
+
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

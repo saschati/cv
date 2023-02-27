@@ -11,10 +11,10 @@
   border-radius: 2px;
   background-color: f.color(warm-white);
 
-  &:before {
-    content: '';
-
+  &__avatar {
     position: absolute;
+
+    @include m.flex(center);
 
     @include m.square(300px, 50%);
     @include m.coords($t: -150px, $l: 60%);
@@ -22,10 +22,10 @@
     background-color: f.color(blue-grey);
   }
 
-  &__avatar {
-    position: absolute;
+  &__header {
+    @include m.flex($jc: space-between);
 
-    @include m.coords($t: -132px, $l: 61.5%);
+    padding-top: 14px;
   }
 
   &__infos {
@@ -38,5 +38,10 @@
 
   &__description {
     margin-top: 8px;
+  }
+
+  &__socials {
+    margin-top: 8px;
+    margin-right: -16px;
   }
 }

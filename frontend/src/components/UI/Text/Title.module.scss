@@ -16,9 +16,11 @@
     &_default {
       @include m.text(f.size(34px), $lh: f.lh(52px));
     }
+
     &_big {
       @include m.text(f.size(45px), $lh: f.lh(65px));
     }
+
     &_middle {
       @include m.text(f.size(26px), $lh: f.lh(42px));
     }

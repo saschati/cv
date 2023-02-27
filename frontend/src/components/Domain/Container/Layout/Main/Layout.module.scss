@@ -11,10 +11,11 @@
 
   height: f.v(window-height, 100vh);
 
-  font-family: c.fonts(arimo);
+  font-family: c.fonts(roboto);
   font-size: f.size();
   line-height: f.lh();
 
+  color: f.color(deep-blue);
   background-color: f.color(blue-grey);
 
   &__profile {

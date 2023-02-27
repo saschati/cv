@@ -4,7 +4,7 @@
 .info {
   display: grid;
   grid-template-rows: min-content;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: repeat(2, max-content);
   column-gap: 16px;
   row-gap: 8px;
 

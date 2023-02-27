@@ -4,6 +4,8 @@ import Avatar from './Avatar'
 import { Title } from 'components/UI/Text'
 import Info from './Info'
 import dayjs from 'utils/dayjs'
+import icon from 'utils/icon'
+import { SocialNetworkList } from 'components/Common/SocialNetwork'
 
 import me from 'app/service/me.json'
 
@@ -32,14 +34,39 @@ const Profile: React.FC = (): JSX.Element => {
     ]
   }, [])
 
+  const socials = useMemo(() => {
+    return [
+      {
+        icon: icon.brands.faGithub,
+      },
+      {
+        icon: icon.brands.faLinkedin,
+      },
+      {
+        icon: icon.brands.faTelegram,
+      },
+      {
+        icon: icon.regular.faEnvelope,
+      },
+      {
+        icon: icon.solid.faMobileAlt,
+      },
+    ]
+  }, [])
+
   return (
     <div className={styles.profile}>
       <div className={styles.profile__avatar}>
         <Avatar img={me.avatar} />
       </div>
-      <Title size="big" weight="bold" className={styles.profile__title}>
-        {me.name}
-      </Title>
+      <div className={styles.profile__header}>
+        <Title size="big" weight="bold" className={styles.profile__title}>
+          {me.name}
+        </Title>
+        <div className={styles.profile__socials}>
+          <SocialNetworkList socials={socials} size="xl" color="var(--color-deep-blue)" />
+        </div>
+      </div>
       <div className={styles.profile__infos}>
         <Info infos={infos} />
       </div>

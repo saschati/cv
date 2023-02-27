@@ -1,0 +1,10 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+
+.avatar {
+  --_avatar-size: 265px;
+
+  &__img {
+    @include m.square(f.v(_avatar-size), 50%);
+  }
+}

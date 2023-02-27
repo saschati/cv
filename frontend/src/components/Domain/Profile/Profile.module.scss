@@ -1,0 +1,42 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+
+.profile {
+  position: relative;
+  min-height: 200px;
+
+  padding-inline: 35px;
+  padding-bottom: 35px;
+
+  border-radius: 2px;
+  background-color: f.color(warm-white);
+
+  &:before {
+    content: '';
+
+    position: absolute;
+
+    @include m.square(300px, 50%);
+    @include m.coords($t: -150px, $l: 60%);
+
+    background-color: f.color(blue-grey);
+  }
+
+  &__avatar {
+    position: absolute;
+
+    @include m.coords($t: -132px, $l: 61.5%);
+  }
+
+  &__infos {
+    margin-top: 18px;
+  }
+
+  &__about {
+    margin-top: 34px;
+  }
+
+  &__description {
+    margin-top: 8px;
+  }
+}

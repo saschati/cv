@@ -1,0 +1,23 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+@use 'src/styles/core/config' as c;
+
+.layout {
+  display: grid;
+  grid-template:
+    ' .    .                    .' 150px
+    ' .    profile              .' auto
+    / auto minmax(auto, 1200px) auto;
+
+  height: f.v(window-height, 100vh);
+
+  font-family: c.fonts(arimo);
+  font-size: f.size();
+  line-height: f.lh();
+
+  background-color: f.color(blue-grey);
+
+  &__profile {
+    grid-area: profile;
+  }
+}

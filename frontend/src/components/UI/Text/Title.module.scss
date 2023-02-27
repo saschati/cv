@@ -1,0 +1,40 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+
+.title {
+  &_position {
+    &_default {
+      @include m.text($ta: start);
+    }
+
+    &_center {
+      @include m.text($ta: center);
+    }
+  }
+
+  &_size {
+    &_default {
+      @include m.text(f.size(34px), $lh: f.lh(52px));
+    }
+    &_big {
+      @include m.text(f.size(45px), $lh: f.lh(65px));
+    }
+    &_middle {
+      @include m.text(f.size(26px), $lh: f.lh(42px));
+    }
+  }
+
+  &_weight {
+    &_default {
+      @include m.text($w: 500);
+    }
+
+    &_middle {
+      @include m.text($w: 600);
+    }
+
+    &_bold {
+      @include m.text($w: 700);
+    }
+  }
+}

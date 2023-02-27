@@ -12,5 +12,15 @@
     "github": "https://github.com/saschati",
     "linkedin": "https://www.linkedin.com",
     "telegram": "https://t.me/saschati"
-  }
+  },
+  "languages": [
+    {
+      "name": "Ukrainian",
+      "value": "Native"
+    },
+    {
+      "name": "English",
+      "value": "Beginner"
+    }
+  ]
 }

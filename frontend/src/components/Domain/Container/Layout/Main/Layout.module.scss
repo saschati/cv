@@ -6,7 +6,9 @@
   display: grid;
   grid-template:
     ' .    .                    .' 150px
-    ' .    profile              .' auto
+    ' .    profile              .' max-content
+    ' .    .                    .' 40px
+    ' .    skills               .' auto
     / auto minmax(auto, 1200px) auto;
 
   height: f.v(window-height, 100vh);
@@ -20,5 +22,9 @@
 
   &__profile {
     grid-area: profile;
+  }
+
+  &__skills {
+    grid-area: skills;
   }
 }

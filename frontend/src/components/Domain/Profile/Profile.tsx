@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import styles from './Profile.module.scss'
 import Avatar from './Avatar'
 import { Title } from 'components/UI/Text'
-import Info from './Info'
+import Info from '../../Common/Info'
 import dayjs from 'utils/dayjs'
 import icon from 'utils/icon'
 import { SocialNetworkList } from 'components/Common/SocialNetwork'
@@ -70,8 +70,16 @@ const Profile: React.FC = (): JSX.Element => {
       <div className={styles.profile__infos}>
         <Info infos={infos} />
       </div>
+      <div className={styles.profile__languages}>
+        <Title as={'p'} weight="middle" size="middle">
+          Languages
+        </Title>
+        <div className={styles.profile__languagesInfos}>
+          <Info infos={me.languages} />
+        </div>
+      </div>
       <div className={styles.profile__about}>
-        <Title as={'p'} weight="middle" size="middle" className={styles.profile__about}>
+        <Title as={'p'} weight="middle" size="middle">
           About me
         </Title>
         <p className={styles.profile__description}>{me.description}</p>

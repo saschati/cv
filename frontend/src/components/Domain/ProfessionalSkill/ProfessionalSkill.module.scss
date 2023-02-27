@@ -1,0 +1,9 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+
+.profSkill {
+  padding: 14px 35px 35px;
+
+  border-radius: 2px;
+  background-color: f.color(warm-white);
+}

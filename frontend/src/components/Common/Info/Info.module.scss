@@ -1,0 +1,32 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+@use 'src/styles/core/screen' as s;
+
+.info {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 16px;
+  row-gap: 8px;
+
+  &__name {
+    @include m.text(f.size(18px), $w: 600);
+  }
+
+  &__value {
+    @include m.text(f.size(18px), $w: 400);
+  }
+
+  // MEDIA
+  @include s.laptop {
+    grid-template-columns: repeat(2, auto);
+
+    &__name {
+      @include m.text(f.size(14px), $w: 600);
+    }
+
+    &__value {
+      @include m.text(f.size(14px), $w: 400);
+    }
+  }
+}

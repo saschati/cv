@@ -1,4 +1,5 @@
 @use 'common/bootstrap' as _common;
 
-@use 'core/config.scss' as c;
-@use 'core/functions.scss' as f;
+::-webkit-scrollbar {
+  width: 0;
+}

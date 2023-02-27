@@ -1,0 +1,81 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+@use 'src/styles/core/screen' as s;
+
+.projectItem {
+  display: grid;
+  grid-template:
+    ' img   .    name               .    links ' 36px
+    ' img   .    .                  .    .     ' 8px
+    ' img   .    desc               desc desc  ' max-content
+    / 150px 14px minmax(200px, 1fr) 14px auto;
+
+  padding: 14px;
+
+  border: 2px solid f.color(deep-blue);
+  border-radius: 4px;
+
+  &__imgWrapper {
+    grid-area: img;
+
+    align-self: center;
+    justify-self: center;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__desc {
+    grid-area: desc;
+    width: 350px;
+  }
+
+  &__links {
+    grid-area: links;
+    align-self: center;
+
+    margin-left: auto;
+  }
+
+  &__img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  // MEDIA
+  @include s.tablet {
+    grid-template:
+      ' img   .    name              ' 22px
+      ' img   .    .                 ' 8px
+      ' img   .    links             ' 22px
+      ' img   .    .                 ' 8px
+      ' img   .    desc              ' max-content
+      / 150px 14px minmax(auto, 1fr);
+
+    &__links {
+      align-self: stretch;
+
+      margin-left: unset;
+    }
+
+    &__desc {
+      width: auto;
+
+      @include m.text(f.size(14px));
+    }
+  }
+
+  @include s.mobile {
+    grid-template:
+      ' img   ' 150px
+      ' .     ' 8px
+      ' name  ' max-content
+      ' .     ' 8px
+      ' links '
+      ' .     ' 8px
+      ' desc  ' max-content
+      / minmax(auto, 1fr);
+  }
+}

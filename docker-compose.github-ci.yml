@@ -1,0 +1,18 @@
+version: "3.7"
+
+x-env-front: &github-env-variables
+  REACT_APP_APP_URL: https://saschati.github.io/cv/
+  PUBLIC_URL: https://saschati.github.io/cv/
+
+services:
+
+  github-node-cli:
+      build:
+        context: .github/docker
+        dockerfile: node/Dockerfile
+      container_name: github-node-cli
+      environment:
+        <<: *github-env-variables
+      volumes:
+        - ./frontend:/app
+

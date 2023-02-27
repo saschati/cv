@@ -1,0 +1,9 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+
+.skills {
+  &__info {
+    margin-top: 8px;
+    padding-left: 14px;
+  }
+}

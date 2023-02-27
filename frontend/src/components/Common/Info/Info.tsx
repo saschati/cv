@@ -3,7 +3,7 @@ import styles from './Info.module.scss'
 
 export type InfoOption = {
   name: string
-  value: string
+  value: string | JSX.Element
 }
 
 export type InfoProps = {

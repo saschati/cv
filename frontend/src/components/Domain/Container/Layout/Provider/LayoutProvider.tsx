@@ -2,9 +2,10 @@ import React, { useLayoutEffect, useMemo, useState } from 'react'
 import { Device, LayoutContext } from './LayoutContext'
 
 const DISPLAY = {
-  LAPTOP: 1199,
-  TABLET: 992,
-  MOBILE: 768,
+  DESCTOP: 1199,
+  LAPTOP: 992,
+  TABLET: 768,
+  MOBILE: 479,
 }
 
 const LayoutProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.Element => {
@@ -16,11 +17,11 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.El
       const width = window.innerWidth
       const height = window.innerHeight
 
-      if (width >= DISPLAY.LAPTOP) {
+      if (width >= DISPLAY.DESCTOP) {
         device = Device.DESCTOP
-      } else if (width >= DISPLAY.TABLET) {
+      } else if (width >= DISPLAY.LAPTOP) {
         device = Device.LAPTOP
-      } else if (width >= DISPLAY.MOBILE) {
+      } else if (width >= DISPLAY.TABLET) {
         device = Device.TABLET
       } else {
         device = Device.MOBILE
@@ -32,14 +33,12 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.El
       document.documentElement.style.setProperty('--window-width', width + 'px')
     }
 
-    if (device === null) {
-      listener()
-    }
+    listener()
 
     window.addEventListener('resize', listener)
 
     return () => window.removeEventListener('resize', listener)
-  }, [device])
+  }, [])
 
   const context = useMemo(() => {
     return {

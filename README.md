@@ -1,4 +1,4 @@
-<h1 align="center">Hacker News</h1>
+<h1 align="center">Curriculum Vitae Olexander Grigorchyk</h1>
 <hr/>
 
 ## Global dependencies

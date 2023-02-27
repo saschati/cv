@@ -1,0 +1,6 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+
+.socialNetworkList {
+  @include m.flex(row wrap, $ai: center, $gap: 8px);
+}

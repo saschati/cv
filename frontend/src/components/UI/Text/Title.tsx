@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import styles from './Title.module.scss'
 import classNames from 'classnames'
 
-type TitleSize = 'default' | 'big' | 'middle'
+type TitleSize = 'default' | 'big' | 'middle' | 'small'
 type TitlePosition = 'default' | 'center'
 type TitleWeight = 'default' | 'middle' | 'bold'
 
@@ -18,6 +18,7 @@ const SIZE_TO_CLASS = {
   default: styles.title_size_default,
   big: styles.title_size_big,
   middle: styles.title_size_middle,
+  small: styles.title_size_small,
 }
 
 const POSITION_TO_CLASS = {

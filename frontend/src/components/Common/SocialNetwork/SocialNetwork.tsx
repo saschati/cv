@@ -3,23 +3,25 @@ import styles from './SocialNetwork.module.scss'
 import classNames from 'classnames'
 import { FontAwesomeIcon, type FontAwesomeIconProps } from '@fortawesome/react-fontawesome'
 
-export type SocialNetworkProps = FontAwesomeIconProps & {
+export type SocialNetworkProps<T extends keyof JSX.IntrinsicElements> = FontAwesomeIconProps & {
   className?: string
-  as?: keyof JSX.IntrinsicElements | React.FC
+  as?: T
+  asProps?: JSX.IntrinsicElements[T]
 }
 
-const SocialNetwork: React.FC<SocialNetworkProps> = ({
+const SocialNetwork = <T extends keyof JSX.IntrinsicElements>({
   className,
   icon,
-  as = 'a',
+  as,
+  asProps,
   ...rest
-}): JSX.Element => {
-  const CostumTag = as
+}: SocialNetworkProps<T>): JSX.Element => {
+  const CustomTag = (as as React.ElementType) || 'a'
 
   return (
-    <CostumTag className={classNames(styles.socialNetwork, className)}>
+    <CustomTag className={classNames(styles.socialNetwork, className)} {...asProps}>
       <FontAwesomeIcon icon={icon} {...rest} />
-    </CostumTag>
+    </CustomTag>
   )
 }
 

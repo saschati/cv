@@ -38,18 +38,33 @@ const Profile: React.FC = (): JSX.Element => {
     return [
       {
         icon: icon.brands.faGithub,
+        asProps: {
+          href: me.socialNetworks.github,
+        },
       },
       {
         icon: icon.brands.faLinkedin,
+        asProps: {
+          href: me.socialNetworks.linkedin,
+        },
       },
       {
         icon: icon.brands.faTelegram,
+        asProps: {
+          href: me.socialNetworks.telegram,
+        },
       },
       {
         icon: icon.regular.faEnvelope,
+        asProps: {
+          href: `tel:${me.phone}`,
+        },
       },
       {
         icon: icon.solid.faMobileAlt,
+        asProps: {
+          href: `mailto:${me.email}`,
+        },
       },
     ]
   }, [])

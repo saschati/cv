@@ -2,10 +2,12 @@ import React from 'react'
 import SocialNetwork, { type SocialNetworkProps } from './SocialNetwork'
 import styles from './SocialNetworkList.module.scss'
 
+type SocialNetworkPropsWithKeys = SocialNetworkProps<keyof JSX.IntrinsicElements>
+
 export type SocialNetworkListProps = {
-  socials: Array<Omit<SocialNetworkProps, 'size'>>
-  size?: SocialNetworkProps['size']
-  color?: SocialNetworkProps['color']
+  socials: Array<Omit<SocialNetworkPropsWithKeys, 'size'>>
+  size?: SocialNetworkPropsWithKeys['size']
+  color?: SocialNetworkPropsWithKeys['color']
 }
 
 const SocialNetworkList: React.FC<SocialNetworkListProps> = ({
@@ -16,7 +18,7 @@ const SocialNetworkList: React.FC<SocialNetworkListProps> = ({
   return (
     <div className={styles.socialNetworkList}>
       {socials.map((social, index) => (
-        <SocialNetwork key={index} as={'div'} color={color} {...social} size={size} />
+        <SocialNetwork key={index} color={color} {...social} size={size} />
       ))}
     </div>
   )

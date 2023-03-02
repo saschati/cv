@@ -20,7 +20,147 @@
     },
     {
       "name": "English",
-      "value": "Beginner"
+      "value": "Beginner/Pre-Intermediate"
     }
-  ]
+  ],
+  "skills": {
+    "frontend": [
+      {
+        "name": "JavaScript",
+        "value": "1 years"
+      },
+      {
+        "name": "CSS",
+        "value": "1 years"
+      },
+      {
+        "name": "React",
+        "value": "6 month"
+      },
+      {
+        "name": "NextJs",
+        "value": "4 month"
+      },
+      {
+        "name": "TypeScript",
+        "value": true
+      },
+      {
+        "name": "Redux",
+        "value": true
+      },
+      {
+        "name": "Sass",
+        "value": true
+      },
+      {
+        "name": "WebPack",
+        "value": true
+      },
+      {
+        "name": "GraphQL",
+        "value": true
+      },
+      {
+        "name": "Figma",
+        "value": true
+      }
+    ],
+    "backend": [
+      {
+        "name": "PHP",
+        "value": "3.6 years"
+      },
+      {
+        "name": "Yii2",
+        "value": "2 years"
+      },
+      {
+        "name": "Laravel",
+        "value": "1 years"
+      },
+      {
+        "name": "Symfony",
+        "value": "6 month"
+      }
+    ],
+    "db": [
+      {
+        "name": "MySQL",
+        "value": "2.5 years"
+      },
+      {
+        "name": "PostgreSQL",
+        "value": "1 years"
+      },
+      {
+        "name": "Redis",
+        "value": true
+      }
+    ],
+    "ides": [
+      {
+        "name": "JetBrains IDEs",
+        "value": true
+      },
+      {
+        "name": "VS Code",
+        "value": true
+      }
+    ],
+    "ci_cd": [
+      {
+        "name": "Github Action",
+        "value": true
+      },
+      {
+        "name": "Jenkins",
+        "value": true
+      }
+    ],
+    "webservers": [
+      {
+        "name": "Nginx",
+        "value": true
+      },
+      {
+        "name": "Apache2",
+        "value": true
+      }
+    ],
+    "other": [
+      {
+        "name": "Postman",
+        "value": true
+      },
+      {
+        "name": "Git",
+        "value": true
+      },
+      {
+        "name": "GitHub/GitLab/Bitbucket",
+        "value": true
+      },
+      {
+        "name": "Docker/Docker-Compose",
+        "value": true
+      },
+      {
+        "name": "OOP",
+        "value": true
+      },
+      {
+        "name": "SOLID",
+        "value": true
+      },
+      {
+        "name": "CQRS",
+        "value": true
+      },
+      {
+        "name": "DDD",
+        "value": true
+      }
+    ]
+  }
 }

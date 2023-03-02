@@ -8,10 +8,11 @@
     ' .    .                    .' 150px
     ' .    profile              .' max-content
     ' .    .                    .' 40px
-    ' .    skills               .' auto
+    ' .    skills               .' max-content
+    ' .    .                    .' 40px
     / auto minmax(auto, 1200px) auto;
 
-  height: f.v(window-height, 100vh);
+  min-height: f.v(window-height, 100vh);
 
   font-family: c.fonts(roboto);
   font-size: f.size();

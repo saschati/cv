@@ -6,4 +6,65 @@
 
   border-radius: 2px;
   background-color: f.color(warm-white);
+
+  &__header {
+    @include m.flex($jc: space-between, $ai: center);
+  }
+
+  &__skills {
+    // @include m.flex(wrap, $jc: space-between);
+    display: grid;
+    grid-template:
+      ' frontend backend      other' max-content
+      ' frontend .            other' 14px
+      ' frontend db           other' max-content
+      ' .        .            .' 14px
+      ' cicd     ws           ides' max-content
+      / auto auto auto;
+    justify-content: space-around;
+
+    margin: 24px auto;
+
+    transition: all 0.5;
+
+    &_format {
+      &_table {
+        grid-auto-flow: row;
+      }
+    }
+  }
+
+  &__skill {
+    &_name {
+      &_frontend {
+        grid-area: frontend;
+      }
+      &_backend {
+        grid-area: backend;
+      }
+      &_db {
+        grid-area: db;
+      }
+      &_ides {
+        grid-area: ides;
+      }
+      &_cicd {
+        grid-area: cicd;
+      }
+      &_ws {
+        grid-area: ws;
+      }
+      &_other {
+        grid-area: other;
+      }
+    }
+
+    &Title {
+    }
+
+    &Info {
+      margin-top: 8px;
+      padding-left: 14px;
+    }
+  }
 }

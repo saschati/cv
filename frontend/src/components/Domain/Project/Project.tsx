@@ -24,6 +24,19 @@ const Project: React.FC = (): JSX.Element => {
       }
     }
 
+    const socialToPopover = (type: ProjectSocialType) => {
+      switch (type) {
+        case 'github':
+          return 'View the code on Github'
+        case 'npm':
+          return 'View the library on NPM'
+        case 'link':
+          return 'View the site via the link'
+        default:
+          throw new Error('Social type not found.')
+      }
+    }
+
     return projects.map((project) => {
       const links = project.social as Array<ProjectSocial>
 
@@ -37,6 +50,7 @@ const Project: React.FC = (): JSX.Element => {
             href: social.href,
             target: '_blank',
           },
+          popoverElement: socialToPopover(social.type),
         })),
       }
     })

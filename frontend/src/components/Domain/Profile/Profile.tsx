@@ -42,30 +42,35 @@ const Profile: React.FC = (): JSX.Element => {
         asProps: {
           href: me.socialNetworks.github,
         },
+        popoverElement: 'Link to Github',
       },
       {
         icon: icon.brands.faLinkedin,
         asProps: {
           href: me.socialNetworks.linkedin,
         },
+        popoverElement: 'Link to LinkedIn profile',
       },
       {
         icon: icon.brands.faTelegram,
         asProps: {
           href: me.socialNetworks.telegram,
         },
+        popoverElement: 'Link to Telegram profile',
       },
       {
         icon: icon.regular.faEnvelope,
         asProps: {
-          href: `tel:${me.phone}`,
+          href: `mailto:${me.email}`,
         },
+        popoverElement: 'Write to the mail',
       },
       {
         icon: icon.solid.faMobileAlt,
         asProps: {
-          href: `mailto:${me.email}`,
+          href: `tel:${me.phone}`,
         },
+        popoverElement: 'Call the phone',
       },
     ]
   }, [])

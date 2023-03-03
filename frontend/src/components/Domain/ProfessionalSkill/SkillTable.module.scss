@@ -1,0 +1,20 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+
+.skillTable {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: max-content;
+  gap: 2px;
+
+  width: max-content;
+
+  background-color: f.color(deep-blue);
+  border: 2px solid f.color(deep-blue);
+
+  &__column {
+    padding: 5px;
+
+    background-color: f.color(warm-white);
+  }
+}

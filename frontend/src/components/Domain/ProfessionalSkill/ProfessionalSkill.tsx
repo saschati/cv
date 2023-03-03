@@ -7,8 +7,15 @@ import ViewSwitcher from './ViewSwitcher'
 import useStorage, { StorageType } from 'hooks/useStorage'
 import { PROFESSIONAL_SKILLS_VIEW_SWITCHER } from 'config/storage'
 import { Switcher } from 'config/constants'
+import SkillTable, { type SkillRow } from './SkillTable'
 
 import me from 'app/service/me.json'
+
+type Skill = {
+  name: string
+  area: string
+  infos: Array<{ name: string; value: string | number | boolean }>
+}
 
 const cx = classNames.bind(styles)
 
@@ -20,7 +27,7 @@ const ProfessionalSkill: React.FC = (): JSX.Element => {
   )
 
   const skills = useMemo(() => {
-    const skills = [
+    const skills: Array<Skill> = [
       {
         name: 'Frontend',
         area: 'profSkill__skill_name_frontend',
@@ -62,7 +69,7 @@ const ProfessionalSkill: React.FC = (): JSX.Element => {
       return skills
     }
 
-    return skills
+    return skills.reduce((acc: Array<SkillRow>, curr) => acc.concat(curr.infos), [])
   }, [switchType])
 
   const handleViewSwitch = useCallback(
@@ -81,12 +88,23 @@ const ProfessionalSkill: React.FC = (): JSX.Element => {
         </Title>
         <ViewSwitcher active={switchType} onSwitch={handleViewSwitch} />
       </div>
-      <div className={cx('profSkill__skills')}>
-        {skills.map(({ area, ...skill }) => (
-          <div className={cx(styles.profSkill__skill, area)} key={skill.name}>
-            <Skills title={skill.name} skills={skill.infos} />
-          </div>
-        ))}
+      <div
+        className={cx(
+          'profSkill__skills',
+          switchType === Switcher.Grid
+            ? 'profSkill__skills_format_grid'
+            : 'profSkill__skills_format_table'
+        )}
+      >
+        {switchType === Switcher.Grid ? (
+          (skills as Array<Skill>).map(({ area, ...skill }) => (
+            <div className={cx(styles.profSkill__skill, area)} key={skill.name}>
+              <Skills title={skill.name} skills={skill.infos} />
+            </div>
+          ))
+        ) : (
+          <SkillTable rows={skills as Array<SkillRow>} />
+        )}
       </div>
     </div>
   )

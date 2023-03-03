@@ -12,24 +12,24 @@
   }
 
   &__skills {
-    // @include m.flex(wrap, $jc: space-between);
-    display: grid;
-    grid-template:
-      ' frontend backend      other' max-content
-      ' frontend .            other' 14px
-      ' frontend db           other' max-content
-      ' .        .            .' 14px
-      ' cicd     ws           ides' max-content
-      / auto auto auto;
-    justify-content: space-around;
-
-    margin: 24px auto;
-
-    transition: all 0.5;
-
     &_format {
+      &_grid {
+        display: grid;
+        grid-template:
+          ' frontend backend      other' max-content
+          ' frontend .            other' 14px
+          ' frontend db           other' max-content
+          ' .        .            .    ' 14px
+          ' cicd     ws           ides ' max-content
+          / auto auto auto;
+        justify-content: space-around;
+
+        margin: 24px auto;
+      }
+
       &_table {
-        grid-auto-flow: row;
+        margin-top: 14px;
+        margin-left: 24px;
       }
     }
   }
@@ -57,9 +57,6 @@
       &_other {
         grid-area: other;
       }
-    }
-
-    &Title {
     }
 
     &Info {

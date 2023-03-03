@@ -20,7 +20,7 @@
     },
     {
       "name": "English",
-      "value": "Beginner/Pre-Intermediate"
+      "value": "Beginner"
     }
   ],
   "skills": {
@@ -54,7 +54,7 @@
         "value": true
       },
       {
-        "name": "WebPack",
+        "name": "Webpack",
         "value": true
       },
       {

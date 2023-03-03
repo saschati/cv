@@ -2,7 +2,7 @@
 @use 'src/styles/core/mixin' as m;
 
 .switcher {
-  @include m.flex();
+  @include m.flex($jc: flex-start);
 
   &__item {
     @include m.flex(center);

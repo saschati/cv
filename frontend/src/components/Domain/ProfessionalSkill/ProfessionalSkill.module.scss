@@ -28,8 +28,9 @@
       }
 
       &_table {
-        margin-top: 14px;
-        margin-left: 24px;
+        @include m.flex(center);
+
+        margin: 14px;
       }
     }
   }
@@ -39,21 +40,27 @@
       &_frontend {
         grid-area: frontend;
       }
+
       &_backend {
         grid-area: backend;
       }
+
       &_db {
         grid-area: db;
       }
+
       &_ides {
         grid-area: ides;
       }
+
       &_cicd {
         grid-area: cicd;
       }
+
       &_ws {
         grid-area: ws;
       }
+
       &_other {
         grid-area: other;
       }

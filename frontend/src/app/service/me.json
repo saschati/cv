@@ -1,9 +1,10 @@
 {
   "name": "Olexander Grigorchyk",
-  "avatar": "/img/profile/avatar.png",
+  "avatar": "/img/profile/avatar.jpg",
   "position": "Front-End/Back-End Developer",
   "birthday": "1999-01-21",
   "experience": "2018-08-08",
+  "experienceСalibrationFactor": -0.6,
   "education": "Bachelor's degree in computer science.",
   "description": "I'm an ambitious young developer who grew up in a small town and graduated with a computer science degree. I have always been fascinated by the world of technology, and my passion for computers led me to choose a career in this field. When I'm not coding, you can usually find me curled up on the couch watching a good movie or TV show, or lost in a virtual world playing a video game.",
   "phone": "+380981739024",
@@ -162,5 +163,127 @@
         "value": true
       }
     ]
-  }
+  },
+  "projects": [
+    {
+      "name": "@saschati/tape-slider",
+      "description": "This is a small library that will allow the elements of your tape to move in a given direction at different speeds, and with the effect of teleportation, with the ability to specify timing function for motion like on the Bezier curve.",
+      "img": "/img/projects/tape-slider.png",
+      "social": [
+        {
+          "type": "github",
+          "href": "https://github.com/saschati/tape-slider"
+        },
+        {
+          "type": "npm",
+          "href": "https://www.npmjs.com/package/@saschati/tape-slider"
+        },
+        {
+          "type": "link",
+          "href": "https://saschati.github.io/tape-slider-docs/"
+        }
+      ]
+    },
+    {
+      "name": "@saschati/side-slider",
+      "description": "A library for animation of side sliders that is calculated and optimized for this niche.",
+      "img": "/img/projects/side-slider.png",
+      "social": [
+        {
+          "type": "github",
+          "href": "https://github.com/saschati/side-slider"
+        },
+        {
+          "type": "npm",
+          "href": "https://www.npmjs.com/package/@saschati/side-slider"
+        },
+        {
+          "type": "link",
+          "href": "https://saschati.github.io/side-slider-docs/"
+        }
+      ]
+    },
+    {
+      "name": "Hackernews with GraphQL",
+      "description": "A small project to demonstrate the work of React & TypeScript and GraphQL based on Apollo.",
+      "img": "/img/projects/hackernews.png",
+      "social": [
+        {
+          "type": "github",
+          "href": "https://github.com/saschati/hackernews"
+        }
+      ]
+    },
+    {
+      "name": "My Curriculum Vitae",
+      "description": "The code base of my cv written in React & TypeScript.",
+      "img": "/img/projects/cv.png",
+      "social": [
+        {
+          "type": "github",
+          "href": "https://github.com/saschati/cv"
+        }
+      ]
+    },
+    {
+      "name": "Happy",
+      "description": "Landing site for practicing typesetting skills.",
+      "img": "/img/projects/happy.png",
+      "social": [
+        {
+          "type": "github",
+          "href": "https://github.com/saschati/happy"
+        },
+        {
+          "type": "link",
+          "href": "https://saschati.github.io/happy/"
+        }
+      ]
+    },
+    {
+      "name": "Aperture",
+      "description": "Landing site for practicing typesetting skills.",
+      "img": "/img/projects/aperture.png",
+      "social": [
+        {
+          "type": "github",
+          "href": "https://github.com/saschati/aperture"
+        },
+        {
+          "type": "link",
+          "href": "https://saschati.github.io/aperture/"
+        }
+      ]
+    },
+    {
+      "name": "Portfolio-UI",
+      "description": "Landing site for practicing typesetting skills.",
+      "img": "/img/projects/portfolio-ui.png",
+      "social": [
+        {
+          "type": "github",
+          "href": "https://github.com/saschati/portfolio-ui"
+        },
+        {
+          "type": "link",
+          "href": "https://saschati.github.io/portfolio-ui/"
+        }
+      ]
+    },
+    {
+      "name": "Confab",
+      "description": "Landing site for practicing typesetting skills.",
+      "img": "/img/projects/confab.png",
+      "social": [
+        {
+          "type": "github",
+          "href": "https://github.com/saschati/confab"
+        },
+        {
+          "type": "link",
+          "href": "https://saschati.github.io/confab/"
+        }
+      ]
+    }
+  ]
 }

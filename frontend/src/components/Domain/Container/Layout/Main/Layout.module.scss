@@ -10,6 +10,8 @@
     ' .    .                    .' 40px
     ' .    skills               .' max-content
     ' .    .                    .' 40px
+    ' .    project              .' max-content
+    ' .    .                    .' 40px
     / auto minmax(auto, 1200px) auto;
 
   min-height: f.v(window-height, 100vh);
@@ -27,5 +29,9 @@
 
   &__skills {
     grid-area: skills;
+  }
+
+  &__project {
+    grid-area: project;
   }
 }

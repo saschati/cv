@@ -1,0 +1,15 @@
+@use 'src/styles/core/functions' as f;
+@use 'src/styles/core/mixin' as m;
+
+.project {
+  padding: 14px 35px 35px;
+
+  border-radius: 2px;
+  background-color: f.color(warm-white);
+
+  &__items {
+    @include m.flex(wrap, $gap: 20px, $jc: center);
+
+    margin: 14px auto;
+  }
+}

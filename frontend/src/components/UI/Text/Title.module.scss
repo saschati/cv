@@ -24,6 +24,10 @@
     &_middle {
       @include m.text(f.size(26px), $lh: f.lh(42px));
     }
+
+    &_small {
+      @include m.text(f.size(18px), $lh: f.lh(36px));
+    }
   }
 
   &_weight {

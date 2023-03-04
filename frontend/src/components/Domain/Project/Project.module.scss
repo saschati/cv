@@ -1,5 +1,6 @@
 @use 'src/styles/core/functions' as f;
 @use 'src/styles/core/mixin' as m;
+@use 'src/styles/core/screen' as s;
 
 .project {
   padding: 14px 35px 35px;
@@ -11,5 +12,14 @@
     @include m.flex(wrap, $gap: 20px, $jc: center);
 
     margin: 14px auto;
+  }
+
+  // MEDIA
+  @include s.tablet {
+    padding: 14px 25px 25px;
+
+    &__item {
+      flex-grow: 1;
+    }
   }
 }

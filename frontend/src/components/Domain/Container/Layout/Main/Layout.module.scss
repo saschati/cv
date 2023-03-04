@@ -1,6 +1,7 @@
 @use 'src/styles/core/functions' as f;
 @use 'src/styles/core/mixin' as m;
 @use 'src/styles/core/config' as c;
+@use 'src/styles/core/screen' as s;
 
 .layout {
   display: grid;
@@ -33,5 +34,30 @@
 
   &__project {
     grid-area: project;
+  }
+
+  // MEDIA
+  @include s.desktop {
+    grid-template:
+      ' .   .       .' 150px
+      ' .   profile .' max-content
+      ' .   .       .' 40px
+      ' .   skills  .' max-content
+      ' .   .       .' 40px
+      ' .   project .' max-content
+      ' .   .       .' 40px
+      / 8px auto 8px;
+  }
+
+  @include s.tablet {
+    grid-template:
+      ' .   .       .' 90px
+      ' .   profile .' max-content
+      ' .   .       .' 40px
+      ' .   skills  .' max-content
+      ' .   .       .' 40px
+      ' .   project .' max-content
+      ' .   .       .' 40px
+      / 8px auto 8px;
   }
 }

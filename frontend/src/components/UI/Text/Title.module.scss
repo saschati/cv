@@ -1,5 +1,6 @@
 @use 'src/styles/core/functions' as f;
 @use 'src/styles/core/mixin' as m;
+@use 'src/styles/core/screen' as s;
 
 .title {
   &_position {
@@ -41,6 +42,27 @@
 
     &_bold {
       @include m.text($w: 700);
+    }
+  }
+
+  // MEDIA
+  @include s.laptop {
+    &_size {
+      &_default {
+        @include m.text(f.size(26px), $lh: f.lh(42px));
+      }
+
+      &_big {
+        @include m.text(f.size(34px), $lh: f.lh(52px));
+      }
+
+      &_middle {
+        @include m.text(f.size(18px), $lh: f.lh(36px));
+      }
+
+      &_small {
+        @include m.text(f.size(16px), $lh: f.lh(22px));
+      }
     }
   }
 }

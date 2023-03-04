@@ -63,7 +63,9 @@ const Project: React.FC = (): JSX.Element => {
       </Title>
       <div className={styles.project__items}>
         {projects.map((project) => (
-          <ProjectItem key={project.name} {...project} />
+          <div key={project.name} className={styles.project__item}>
+            <ProjectItem {...project} />
+          </div>
         ))}
       </div>
     </div>

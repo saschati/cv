@@ -10,6 +10,8 @@ import { Switcher } from 'config/constants'
 import SkillTable, { type SkillRow } from './SkillTable'
 
 import me from 'app/service/me.json'
+import useLayout from 'hooks/useLayout'
+import { Device } from '../Container/Layout/Provider'
 
 type Skill = {
   name: string
@@ -21,10 +23,15 @@ const cx = classNames.bind(styles)
 
 const ProfessionalSkill: React.FC = (): JSX.Element => {
   const storage = useStorage(StorageType.LOCAL)
+  const { device } = useLayout()
 
   const [switchType, setSwitchType] = useState<Switcher>(
     () => storage.get(PROFESSIONAL_SKILLS_VIEW_SWITCHER) || Switcher.Grid
   )
+
+  const isAdaptive = useMemo(() => {
+    return [Device.DESCTOP, Device.LAPTOP, Device.TABLET].includes(device)
+  }, [device])
 
   const skills = useMemo(() => {
     const skills: Array<Skill> = [
@@ -65,12 +72,12 @@ const ProfessionalSkill: React.FC = (): JSX.Element => {
       },
     ]
 
-    if (switchType === Switcher.Grid) {
+    if (switchType === Switcher.Grid && isAdaptive) {
       return skills
     }
 
     return skills.reduce((acc: Array<SkillRow>, curr) => acc.concat(curr.infos), [])
-  }, [switchType])
+  }, [switchType, isAdaptive])
 
   const handleViewSwitch = useCallback(
     (type: Switcher) => {
@@ -86,17 +93,17 @@ const ProfessionalSkill: React.FC = (): JSX.Element => {
         <Title as={'h2'} weight="middle">
           Professional skills
         </Title>
-        <ViewSwitcher active={switchType} onSwitch={handleViewSwitch} />
+        {isAdaptive && <ViewSwitcher active={switchType} onSwitch={handleViewSwitch} />}
       </div>
       <div
         className={cx(
           'profSkill__skills',
-          switchType === Switcher.Grid
+          switchType === Switcher.Grid && isAdaptive
             ? 'profSkill__skills_format_grid'
             : 'profSkill__skills_format_table'
         )}
       >
-        {switchType === Switcher.Grid ? (
+        {switchType === Switcher.Grid && isAdaptive ? (
           (skills as Array<Skill>).map(({ area, ...skill }) => (
             <div className={cx(styles.profSkill__skill, area)} key={skill.name}>
               <Skills title={skill.name} skills={skill.infos} />

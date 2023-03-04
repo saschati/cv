@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.5272c4f9.css",
-    "main.js": "/static/js/main.03a22d14.js",
-    "static/js/787.550f3429.chunk.js": "/static/js/787.550f3429.chunk.js",
-    "index.html": "/index.html",
-    "main.5272c4f9.css.map": "/static/css/main.5272c4f9.css.map",
-    "main.03a22d14.js.map": "/static/js/main.03a22d14.js.map",
-    "787.550f3429.chunk.js.map": "/static/js/787.550f3429.chunk.js.map"
+    "main.css": "https://saschati.github.io/cv/static/css/main.5272c4f9.css",
+    "main.js": "https://saschati.github.io/cv/static/js/main.1d0d66f1.js",
+    "static/js/787.550f3429.chunk.js": "https://saschati.github.io/cv/static/js/787.550f3429.chunk.js",
+    "index.html": "https://saschati.github.io/cv/index.html",
+    "main.5272c4f9.css.map": "https://saschati.github.io/cv/static/css/main.5272c4f9.css.map",
+    "main.1d0d66f1.js.map": "https://saschati.github.io/cv/static/js/main.1d0d66f1.js.map",
+    "787.550f3429.chunk.js.map": "https://saschati.github.io/cv/static/js/787.550f3429.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5272c4f9.css",
-    "static/js/main.03a22d14.js"
+    "static/js/main.1d0d66f1.js"
   ]
 }

@@ -1,1 +1,0 @@
-export const PROFESSIONAL_SKILLS_VIEW_SWITCHER = 'ps.vs'

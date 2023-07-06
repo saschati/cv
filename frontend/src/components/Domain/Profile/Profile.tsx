@@ -13,7 +13,7 @@ const Profile: React.FC = (): JSX.Element => {
   const infos = useMemo(() => {
     const age = dayjs().diff(dayjs(me.birthday), 'year')
     // dayjs().diff(dayjs(me.experience), 'year', true) + me.experienceСalibrationFactor
-    const experience = 4.6
+    const experience = 4.8
 
     return [
       {

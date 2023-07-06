@@ -70,11 +70,11 @@
     "backend": [
       {
         "name": "PHP",
-        "value": "3.6 years"
+        "value": "3 years 8 month"
       },
       {
         "name": "Yii2",
-        "value": "2 years"
+        "value": "2 years 2 month"
       },
       {
         "name": "Laravel",
@@ -88,11 +88,15 @@
     "db": [
       {
         "name": "MySQL",
-        "value": "2.6 years"
+        "value": "2 years 6 month"
       },
       {
         "name": "PostgreSQL",
         "value": "1 years"
+      },
+      {
+        "name": "MongoDB",
+        "value": "2 month"
       },
       {
         "name": "Redis",

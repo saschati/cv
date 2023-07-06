@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://saschati.github.io/cv/static/css/main.5272c4f9.css",
-    "main.js": "https://saschati.github.io/cv/static/js/main.593c6186.js",
+    "main.css": "https://saschati.github.io/cv/static/css/main.c3016322.css",
+    "main.js": "https://saschati.github.io/cv/static/js/main.27a15341.js",
     "static/js/787.550f3429.chunk.js": "https://saschati.github.io/cv/static/js/787.550f3429.chunk.js",
     "index.html": "https://saschati.github.io/cv/index.html",
-    "main.5272c4f9.css.map": "https://saschati.github.io/cv/static/css/main.5272c4f9.css.map",
-    "main.593c6186.js.map": "https://saschati.github.io/cv/static/js/main.593c6186.js.map",
+    "main.c3016322.css.map": "https://saschati.github.io/cv/static/css/main.c3016322.css.map",
+    "main.27a15341.js.map": "https://saschati.github.io/cv/static/js/main.27a15341.js.map",
     "787.550f3429.chunk.js.map": "https://saschati.github.io/cv/static/js/787.550f3429.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5272c4f9.css",
-    "static/js/main.593c6186.js"
+    "static/css/main.c3016322.css",
+    "static/js/main.27a15341.js"
   ]
 }

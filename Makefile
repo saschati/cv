@@ -3,6 +3,8 @@
 # make commands be run with `bash` instead of the default `sh`
 SHELL='/bin/bash'
 
+docker_compose_bin:=$(shell [ -x "$(command -v docker-compose)" ] && echo 'docker-compose' || echo 'docker compose')
+
 # Setup —————————————————————————————————————————————————————————————————————————————————
 .DEFAULT_GOAL := help
 
@@ -33,22 +35,22 @@ test: frontend-test ## Run testing
 lint: frontend-lint ## Run linters
 
 docker-up:
-	docker-compose up -d
+	$(docker_compose_bin) up -d
 
 docker-down:
-	docker-compose down --remove-orphans
+	$(docker_compose_bin) down --remove-orphans
 
 docker-down-clear:
-	docker-compose down -v --remove-orphans
+	$(docker_compose_bin) down -v --remove-orphans
 
 docker-stop:
-	docker-compose stop
+	$(docker_compose_bin) stop
 
 docker-pull:
-	docker-compose pull
+	$(docker_compose_bin) pull
 
 docker-build:
-	docker-compose build
+	$(docker_compose_bin) build
 
 app-clear:
 	docker run --rm -v ${PWD}/frontend:/app -w /app alpine sh -c 'rm -f .ready'
@@ -61,21 +63,21 @@ frontend-init: ## Init frontend
 frontend-init: frontend-yarn-install
 
 frontend-yarn-install: ## Install yarn package
-	docker-compose run --rm frontend-node-cli yarn install
+	$(docker_compose_bin) run --rm frontend-node-cli yarn install
 
 frontend-node-cli: ## Run node container command. Args: cmd - any command line
-	docker-compose run --rm frontend-node-cli $(cmd)
+	$(docker_compose_bin) run --rm frontend-node-cli $(cmd)
 
 frontend-lint: ## Run lints
-	docker-compose run --rm frontend-node-cli yarn stylelint
-	docker-compose run --rm frontend-node-cli yarn eslint
+	$(docker_compose_bin) run --rm frontend-node-cli yarn stylelint
+	$(docker_compose_bin) run --rm frontend-node-cli yarn eslint
 
 frontend-test: ## Run test
-	docker-compose run --rm frontend-node-cli yarn test --watchAll=false
+	$(docker_compose_bin) run --rm frontend-node-cli yarn test --watchAll=false
 
 frontend-fix: ## Run lint fixer
-	docker-compose run --rm frontend-node-cli yarn prettier
-	docker-compose run --rm frontend-node-cli yarn eslint:fix
+	$(docker_compose_bin) run --rm frontend-node-cli yarn prettier
+	$(docker_compose_bin) run --rm frontend-node-cli yarn eslint:fix
 
 frontend-logs: ## Show logs
-	docker-compose logs --follow frontend-node
+	$(docker_compose_bin) logs --follow frontend-node

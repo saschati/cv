@@ -3,7 +3,7 @@ import styles from './Layout.module.scss'
 import LayoutProvider from '../Provider/LayoutProvider'
 import Profile from 'components/Domain/Profile'
 import ProfessionalSkill from 'components/Domain/ProfessionalSkill'
-// import Project from 'components/Domain/Project'
+import Project from 'components/Domain/Project'
 
 const Layout: React.FC = (): JSX.Element => {
   return (
@@ -15,9 +15,9 @@ const Layout: React.FC = (): JSX.Element => {
         <main className={styles.layout__skills}>
           <ProfessionalSkill />
         </main>
-        {/* <div className={styles.layout__project}>
+        <div className={styles.layout__project}>
           <Project />
-        </div> */}
+        </div>
       </div>
     </LayoutProvider>
   )

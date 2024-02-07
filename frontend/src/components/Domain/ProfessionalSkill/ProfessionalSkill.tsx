@@ -1,9 +1,8 @@
 import { Title } from 'components/UI/Text'
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import styles from './ProfessionalSkill.module.scss'
 import classNames from 'classnames/bind'
 import Skills from './Skills'
-import ViewSwitcher from './ViewSwitcher'
 import useStorage, { StorageType } from 'hooks/useStorage'
 import { PROFESSIONAL_SKILLS_VIEW_SWITCHER } from 'config/storage'
 import { Switcher } from 'config/constants'
@@ -25,7 +24,7 @@ const ProfessionalSkill: React.FC = (): JSX.Element => {
   const storage = useStorage(StorageType.LOCAL)
   const { device } = useLayout()
 
-  const [switchType, setSwitchType] = useState<Switcher>(
+  const [switchType] = useState<Switcher>(
     () => storage.get(PROFESSIONAL_SKILLS_VIEW_SWITCHER) || Switcher.Grid
   )
 
@@ -79,21 +78,12 @@ const ProfessionalSkill: React.FC = (): JSX.Element => {
     return skills.reduce((acc: Array<SkillRow>, curr) => acc.concat(curr.infos), [])
   }, [switchType, isAdaptive])
 
-  const handleViewSwitch = useCallback(
-    (type: Switcher) => {
-      storage.set(PROFESSIONAL_SKILLS_VIEW_SWITCHER, type)
-      setSwitchType(type)
-    },
-    [storage]
-  )
-
   return (
     <div className={styles.profSkill}>
       <div className={styles.profSkill__header}>
         <Title as={'h2'} weight="middle">
           Professional skills
         </Title>
-        {isAdaptive && <ViewSwitcher active={switchType} onSwitch={handleViewSwitch} />}
       </div>
       <div
         className={cx(

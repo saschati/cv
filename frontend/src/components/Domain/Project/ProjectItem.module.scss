@@ -8,6 +8,8 @@
     ' img   .    name               .    links ' 36px
     ' img   .    .                  .    .     ' 8px
     ' img   .    desc               desc desc  ' max-content
+    ' img   .    .                  .    .     ' 8px
+    ' img   .    ide                ide  ide   ' max-content
     / 150px 14px minmax(200px, 1fr) 14px auto;
 
   padding: 14px;
@@ -38,6 +40,11 @@
     margin-left: auto;
   }
 
+  &__involvementDuration {
+    grid-area: ide;
+    width: 350px;
+  }
+
   &__img {
     width: 150px;
     height: 150px;
@@ -52,6 +59,8 @@
       ' img   .    links             ' 22px
       ' img   .    .                 ' 8px
       ' img   .    desc              ' max-content
+      ' img   .    .                 ' 8px
+      ' img   .    ide               ' max-content
       / 150px 14px minmax(auto, 1fr);
 
     &__links {
@@ -65,6 +74,10 @@
 
       @include m.text(f.size(14px));
     }
+
+    &__involvementDuration {
+      width: auto;
+    }
   }
 
   @include s.mobile {
@@ -76,6 +89,8 @@
       ' links '
       ' .     ' 8px
       ' desc  ' max-content
+      ' .     ' 8px
+      ' ide   ' max-content
       / minmax(auto, 1fr);
   }
 }

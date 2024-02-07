@@ -3,8 +3,7 @@
   "avatar": "/img/profile/avatar.jpg",
   "position": "Middle Full-stack Developer (React + PHP)",
   "birthday": "1999-01-21",
-  "experience": "2018-08-08",
-  "experienceCalibrationFactor": -0.0,
+  "experience": "4 years 8 months",
   "education": "Bachelor's degree in computer science.",
   "description": "I'm a passionate and ambitious front end developer who believes that web applications make a positive impact in people’s life. I am constantly learning new ways to build my skill set and add tools that will compliment those skills.",
   "phone": "+380981739024",
@@ -40,7 +39,7 @@
       },
       {
         "name": "NextJs",
-        "value": true
+        "value": "4 months"
       },
       {
         "name": "TypeScript",
@@ -70,11 +69,11 @@
     "backend": [
       {
         "name": "PHP",
-        "value": "3 years 8 month"
+        "value": "4 years 4 month"
       },
       {
         "name": "Yii2",
-        "value": "2 years 2 month"
+        "value": "2 years 10 month"
       },
       {
         "name": "Laravel",
@@ -88,7 +87,7 @@
     "db": [
       {
         "name": "MySQL",
-        "value": "2 years 6 month"
+        "value": "3 years 2 month"
       },
       {
         "name": "PostgreSQL",
@@ -170,122 +169,77 @@
   },
   "projects": [
     {
-      "name": "@saschati/tape-slider",
-      "description": "This is a small library that will allow the elements of your tape to move in a given direction at different speeds, and with the effect of teleportation, with the ability to specify timing function for motion like on the Bezier curve.",
-      "img": "/img/projects/tape-slider.png",
+      "name": "Web-systems Solutions",
+      "description": "Ukrainian company that creates electronic eCommerce solutions.",
+      "img": "/img/projects/wss.png",
+      "involvementDuration": "3 years 4 months",
       "social": [
         {
-          "type": "github",
-          "href": "https://github.com/saschati/tape-slider"
-        },
-        {
-          "type": "npm",
-          "href": "https://www.npmjs.com/package/@saschati/tape-slider"
+          "type": "linkedin",
+          "href": "https://www.linkedin.com/company/wss-design/"
         },
         {
           "type": "link",
-          "href": "https://saschati.github.io/tape-slider-docs/"
+          "href": "https://web-systems.solutions/en/"
         }
       ]
     },
     {
-      "name": "@saschati/side-slider",
-      "description": "A library for animation of side sliders that is calculated and optimized for this niche.",
-      "img": "/img/projects/side-slider.png",
+      "name": "Bintime",
+      "description": "Software development and solutions service company, boasting over 15 years of hands-on experience.",
+      "img": "/img/projects/bintime.png",
+      "involvementDuration": "3 months",
       "social": [
         {
-          "type": "github",
-          "href": "https://github.com/saschati/side-slider"
-        },
-        {
-          "type": "npm",
-          "href": "https://www.npmjs.com/package/@saschati/side-slider"
+          "type": "linkedin",
+          "href": "https://www.linkedin.com/company/bintime/"
         },
         {
           "type": "link",
-          "href": "https://saschati.github.io/side-slider-docs/"
+          "href": "https://bintime.com/"
         }
       ]
     },
     {
-      "name": "Hackernews with GraphQL",
-      "description": "A small project to demonstrate the work of React & TypeScript and GraphQL based on Apollo.",
-      "img": "/img/projects/hackernews.png",
+      "name": "Evsport.info",
+      "description": "Site of announcements for sports events.",
+      "img": "/img/projects/evsport.png",
+      "involvementDuration": "4 months",
       "social": [
-        {
-          "type": "github",
-          "href": "https://github.com/saschati/hackernews"
-        }
-      ]
-    },
-    {
-      "name": "My Curriculum Vitae",
-      "description": "The code base of my cv written in React & TypeScript.",
-      "img": "/img/projects/cv.png",
-      "social": [
-        {
-          "type": "github",
-          "href": "https://github.com/saschati/cv"
-        }
-      ]
-    },
-    {
-      "name": "Happy",
-      "description": "Landing site for practicing typesetting skills.",
-      "img": "/img/projects/happy.png",
-      "social": [
-        {
-          "type": "github",
-          "href": "https://github.com/saschati/happy"
-        },
         {
           "type": "link",
-          "href": "https://saschati.github.io/happy/"
+          "href": "https://evsport.info"
         }
       ]
     },
     {
-      "name": "Aperture",
-      "description": "Landing site for practicing typesetting skills.",
-      "img": "/img/projects/aperture.png",
+      "name": "Alpaka",
+      "description": "Shop selling items for the bedroom.",
+      "img": "/img/projects/alpaca.png",
+      "involvementDuration": "1 months",
+      "social": []
+    },
+    {
+      "name": "Umlasavto ERP",
+      "description": "ERP system.",
+      "img": "/img/projects/no-img.jpg",
+      "involvementDuration": "5 months",
       "social": [
         {
-          "type": "github",
-          "href": "https://github.com/saschati/aperture"
-        },
-        {
           "type": "link",
-          "href": "https://saschati.github.io/aperture/"
+          "href": "https://umlasavto.pp.ua/"
         }
       ]
     },
     {
-      "name": "Portfolio-UI",
-      "description": "Landing site for practicing typesetting skills.",
-      "img": "/img/projects/portfolio-ui.png",
+      "name": "Umlasavto Logistic",
+      "description": "System of accounting for logistics costs.",
+      "img": "/img/projects/no-img.jpg",
+      "involvementDuration": "3 months",
       "social": [
         {
-          "type": "github",
-          "href": "https://github.com/saschati/portfolio-ui"
-        },
-        {
           "type": "link",
-          "href": "https://saschati.github.io/portfolio-ui/"
-        }
-      ]
-    },
-    {
-      "name": "Confab",
-      "description": "Landing site for practicing typesetting skills.",
-      "img": "/img/projects/confab.png",
-      "social": [
-        {
-          "type": "github",
-          "href": "https://github.com/saschati/confab"
-        },
-        {
-          "type": "link",
-          "href": "https://saschati.github.io/confab/"
+          "href": "https://logistics.umlasavto.pp.ua/"
         }
       ]
     }

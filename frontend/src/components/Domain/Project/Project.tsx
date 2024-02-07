@@ -19,6 +19,8 @@ const Project: React.FC = (): JSX.Element => {
           return icon.brands.faNpm
         case 'link':
           return icon.solid.faLink
+        case 'linkedin':
+          return icon.brands.faLinkedin
         default:
           throw new Error('Social type not found.')
       }
@@ -32,6 +34,8 @@ const Project: React.FC = (): JSX.Element => {
           return 'View the library on NPM'
         case 'link':
           return 'View the site via the link'
+        case 'linkedin':
+          return 'View the profile on LinkedIn'
         default:
           throw new Error('Social type not found.')
       }
@@ -44,6 +48,7 @@ const Project: React.FC = (): JSX.Element => {
         name: project.name,
         description: project.description,
         img: project.img,
+        involvementDuration: project.involvementDuration,
         links: links.map((social: ProjectSocial) => ({
           icon: socialToFaIcon(social.type),
           asProps: {
@@ -59,7 +64,7 @@ const Project: React.FC = (): JSX.Element => {
   return (
     <div className={styles.project}>
       <Title as="h3" weight="middle">
-        Projects
+        Projects & Companies
       </Title>
       <div className={styles.project__items}>
         {projects.map((project) => (

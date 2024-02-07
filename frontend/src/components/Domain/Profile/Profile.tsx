@@ -12,8 +12,6 @@ import me from 'app/service/me.json'
 const Profile: React.FC = (): JSX.Element => {
   const infos = useMemo(() => {
     const age = dayjs().diff(dayjs(me.birthday), 'year')
-    // dayjs().diff(dayjs(me.experience), 'year', true) + me.experienceCalibrationFactor
-    const experience = 4.8
 
     return [
       {
@@ -22,7 +20,7 @@ const Profile: React.FC = (): JSX.Element => {
       },
       {
         name: 'Developer Experience',
-        value: String(experience.toFixed(1)) + ' years',
+        value: me.experience,
       },
       {
         name: 'Age',

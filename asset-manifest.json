@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "https://saschati.github.io/cv/static/css/main.cf6f2112.css",
-    "main.js": "https://saschati.github.io/cv/static/js/main.8de89f40.js",
+    "main.js": "https://saschati.github.io/cv/static/js/main.5dc5906c.js",
     "static/js/787.550f3429.chunk.js": "https://saschati.github.io/cv/static/js/787.550f3429.chunk.js",
     "index.html": "https://saschati.github.io/cv/index.html",
     "main.cf6f2112.css.map": "https://saschati.github.io/cv/static/css/main.cf6f2112.css.map",
-    "main.8de89f40.js.map": "https://saschati.github.io/cv/static/js/main.8de89f40.js.map",
+    "main.5dc5906c.js.map": "https://saschati.github.io/cv/static/js/main.5dc5906c.js.map",
     "787.550f3429.chunk.js.map": "https://saschati.github.io/cv/static/js/787.550f3429.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf6f2112.css",
-    "static/js/main.8de89f40.js"
+    "static/js/main.5dc5906c.js"
   ]
 }

@@ -3,9 +3,9 @@
   "avatar": "/img/profile/avatar.jpg",
   "position": "Middle Full-stack Developer (React + PHP)",
   "birthday": "1999-01-21",
-  "experience": "4 years 8 months",
+  "experience": "6 years 10 months",
   "education": "Bachelor's degree in computer science.",
-  "description": "I'm a passionate and ambitious front end developer who believes that web applications make a positive impact in people’s life. I am constantly learning new ways to build my skill set and add tools that will compliment those skills.",
+  "description": "I'm a passionate and ambitious frontend and backend developer who believes that web applications make a positive impact in people’s life. I am constantly learning new ways to build my skill set and add tools that will compliment those skills.",
   "phone": "+380981739024",
   "email": "saschatimail@gmail.com",
   "socialNetworks": {
@@ -69,7 +69,7 @@
     "backend": [
       {
         "name": "PHP",
-        "value": "4 years 4 month"
+        "value": "6 years 6 month"
       },
       {
         "name": "Yii2",
@@ -82,6 +82,10 @@
       {
         "name": "Symfony",
         "value": "6 month"
+      },
+      {
+        "name": "Phalcon",
+        "value": "2 years 2 month"
       }
     ],
     "db": [
@@ -91,7 +95,7 @@
       },
       {
         "name": "PostgreSQL",
-        "value": "1 years"
+        "value": "3 years 2 month"
       },
       {
         "name": "MongoDB",
@@ -146,7 +150,11 @@
         "value": true
       },
       {
-        "name": "Docker/Docker-Compose",
+        "name": "Docker",
+        "value": true
+      },
+      {
+        "name": "Grafana/Influx",
         "value": true
       },
       {
@@ -197,6 +205,22 @@
         {
           "type": "link",
           "href": "https://bintime.com/"
+        }
+      ]
+    },
+    {
+      "name": "TelcoGuard",
+      "description": "TelcoGuard is an industry leader in fraud prevention for A2P traffic.",
+      "img": "/img/projects/telcoguard.jpeg",
+      "involvementDuration": "2 years 2 months",
+      "social": [
+        {
+          "type": "linkedin",
+          "href": "https://www.linkedin.com/company/telcoguardcom/"
+        },
+        {
+          "type": "link",
+          "href": "https://telcoguard.com/"
         }
       ]
     },

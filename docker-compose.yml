@@ -1,18 +1,17 @@
-version: '3.8'
-
 x-env-front: &front-env-variables
     REACT_APP_APP_URL: http://localhost
 
 services:
 
     reverse-proxy:
-        image: traefik:v2.9
-        command: 
-            --api.insecure=true
-            --providers.docker=true
-            --providers.docker.exposedByDefault=false
-            --providers.docker.network=traefik-public
-            --entryPoints.web.address=:80
+        image: traefik:v3.6.1
+        command:
+            - --api.insecure=true
+            - --providers.docker=true
+            - --providers.docker.exposedbydefault=false
+            - --providers.docker.network=traefik-public
+            - --providers.docker.endpoint=unix:///var/run/docker.sock
+            - --entrypoints.web.address=:80
         ports:
             # The HTTP port
             - "80:80"
@@ -21,7 +20,7 @@ services:
         networks:
             - traefik-public
         volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
+            - /var/run/docker.sock:/var/run/docker.sock:ro
         labels:
             - traefik.enable=true
             - traefik.docker.network=traefik-public
@@ -39,13 +38,15 @@ services:
        labels:
            - traefik.enable=true
            - traefik.docker.network=traefik-public
+
            - traefik.http.routers.frontend.rule=Host(`localhost`) || Host(`www.localhost`)
            - traefik.http.routers.frontend.entryPoints=web
+           - traefik.http.routers.frontend.middlewares=frontend-redirect
            - traefik.http.services.frontend.loadbalancer.server.port=80
+
            - traefik.http.middlewares.frontend-redirect.redirectRegex.regex=^(https?://)www.localhost/(.*)$$
            - traefik.http.middlewares.frontend-redirect.redirectRegex.replacement=$${1}localhost/$${2}
            - traefik.http.middlewares.frontend-redirect.redirectRegex.permanent=true
-           - traefik.http.routers.frontend.middlewares=frontend-redirect
 
     frontend-node:
        build:
